@@ -1,8 +1,5 @@
 
 
-console.log(users.length)
-
-
 
 // ------------------------------------------------------------------------------------------------
 
@@ -11,8 +8,16 @@ console.log(users.length)
 * @param {String} id - идентификатор пользователя
 * @return {Object} - объект пользователя
 */
-function getUserById(id) {}
 
+/*function getUserById(id) {
+    let newUsers = users.filter(function exp(val, index){
+
+      return users[index]._id === id
+    })
+    console.log(newUsers)
+}
+
+getUserById("5a58d21ccb3c3f594dab0afc")*/
 
 
 
@@ -23,8 +28,19 @@ function getUserById(id) {}
 * @return {Number} - средний возраст
 */
 
-function getAverangeUsers() {}
 
+/*function getAverangeUsers() {
+    let ageSumm = 0;
+    let count = 0;
+    users.forEach(function(item, i, arr) {
+        ageSumm = ageSumm + users[i].age
+        count = count + 1
+      });
+      let number = ageSumm/count
+      console.log(number)
+      
+}
+getAverangeUsers()*/
 
 
 
@@ -34,8 +50,18 @@ function getAverangeUsers() {}
 * Определить количество активных пользователей
 * @return {Array} - список активных пользователей
 */
-function getActiveUsers() {}
+/*function getActiveUsers() {
+    let activeUsers = users.filter(function exp(val, index){
 
+        return users[index].isActive 
+      })
+      console.log(activeUsers)
+}
+getActiveUsers()
+*/
+
+
+    
 
 
 
@@ -46,8 +72,24 @@ function getActiveUsers() {}
 * @return {Object} - { male: 10, female: 20 }
 */
 
-function getUsersGender() {}
+/*function getUsersGender() {
+    
+    let result = {male: 0, female: 0};
 
+    for(let i = 0; i < users.length; i++)
+    {
+        if(users[i].gender =="male"){
+
+            result.male = result.male + 1
+        }
+        else{
+            result.female =  result.female + 1
+        }
+    }
+    console.log(result)
+}
+
+getUsersGender()*/
 
 
 
@@ -57,8 +99,21 @@ function getUsersGender() {}
 * Определить самого старшего пользователя
 * @return {Number} - возраст самого старшего пользователя
 */
-function getOldestUser() {}
+/*function getOldestUser() {
 
+    let number = 0;
+    users.forEach(function(item, i, arr) {
+
+        if(number < users[i].age){
+            
+            number = users[i].age
+        }
+      });
+     
+      console.log(number)
+}
+
+getOldestUser()*/
 
 
 
@@ -68,7 +123,22 @@ function getOldestUser() {}
 * Определить самого младшего пользователя
 * @return {Number} - возраст самого младшего пользователя
 */
-function getYoungestUser() {}
+
+/*function getYoungestUser() {
+
+    let number = users[0].age;
+    for(let i = 0; i < users.length; i++) {
+
+        if(number > users[i].age){
+            
+            number = users[i].age
+        }
+      };
+     
+      console.log(number)
+}
+
+getYoungestUser()*/
 
 
 
