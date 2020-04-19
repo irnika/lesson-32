@@ -150,9 +150,36 @@ getYoungestUser()*/
 * @param {String} order - указываться asc или desc (по возростанию / по убыванию)
 * @return {Array} - список сортированных пользователей
 */
-function sortUsersByAge(order) {}
 
+/*function sortUsersByAge(order) {
 
+  if (order === 'asc'){
+    function comp(a, b) {
+ 
+        if (a.age < b.age)
+          return -1;
+        if (a.age > b.age)
+          return 1;
+          return 0;
+      }
+    }
+      else{
+        function comp(a, b) {
+
+        if (a.age > b.age)
+        return -1;
+      if (a.age < b.age)
+        return 1;
+        return 0;  
+      }
+    }
+      
+      users.sort(comp);
+  
+ }
+    sortUsersByAge('desc')
+
+    console.log(users)*/
 
 
 // ------------------------------------------------------------------------------------------------
@@ -162,7 +189,19 @@ function sortUsersByAge(order) {}
 * @param {String} fruitName - название фрукта (apple)
 * @return {Array} - список пользователей, кто люит этот фрукт
 */
-function getFavoriteFruit(fruitName) {}
+
+/*function getFavoriteFruit(fruitName) {
+
+    let fruitUsers = users.filter(function exp(val, index){
+
+        return users[index].favoriteFruit === fruitName
+      })
+      console.log("яблоки любят: ", fruitUsers.length, "пользователей")
+      console.log(fruitUsers)
+      
+}
+getFavoriteFruit('apple')
+*/
 
 
 
@@ -176,7 +215,27 @@ function getFavoriteFruit(fruitName) {}
 *
 * @return {Array} - список активных пользователей
 */
-function mapUsersByFields(fields) {}
+
+
+function mapUsersByFields() {}
+
+    
+let result = users.map(function(element){
+   
+  let arr = {
+  name: element.name,
+  phone: element.phone,
+  email: element.email,
+  balance: element.balance,
+}
+   
+  
+return arr
+})
+console.log(result) 
+
+
+
 
 
 
@@ -187,9 +246,15 @@ function mapUsersByFields(fields) {}
 * @param {Array} tags - список тегов(ключей) по которым выполняем, 
 * @return {Array} - список пользователей у которых есть хотя бы один тег
 */
-function getUsersByTags(tags) {}
+function getUsersByTags(tags) {
+for( let i = 0; i < users.length; i++){
+  if(users[i].tags){
+    console.log(users[i])
+  }
+}
+}
 
-
+getUsersByTags (users.phone)
 
 
 // ------------------------------------------------------------------------------------------------
@@ -198,4 +263,19 @@ function getUsersByTags(tags) {}
 * Какой общий баланс всех пользователей
 * @return {String} - $23,4344.10
 */
-function getBalanceUsers() {}
+
+/*function getBalanceUsers() {
+  let userBalance = 0;
+  let options = { style: 'currency', currency: 'USD' };
+  for(let i = 0; i < users.length; i++){
+    
+    
+
+  let a = users[i].balance.replace('$','');
+  let b = a.replace(',','');
+  userBalance = userBalance + (+ b)
+    
+  }
+  console.log(new Intl.NumberFormat('en-US', options).format(userBalance ));
+}
+getBalanceUsers() */
