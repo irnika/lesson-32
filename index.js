@@ -246,7 +246,7 @@ console.log(result)
 * @param {Array} tags - список тегов(ключей) по которым выполняем, 
 * @return {Array} - список пользователей у которых есть хотя бы один тег
 */
-function getUsersByTags(tags) {
+/*function getUsersByTags(tags) {
 for( let i = 0; i < users.length; i++){
   if(users[i].tags){
     console.log(users[i])
@@ -254,7 +254,7 @@ for( let i = 0; i < users.length; i++){
 }
 }
 
-getUsersByTags (users.phone)
+getUsersByTags (users.phone)*/
 
 
 // ------------------------------------------------------------------------------------------------
