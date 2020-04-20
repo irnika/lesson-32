@@ -252,7 +252,7 @@ mapUsersByFields(["name", 'phone'])
 function getUsersByTags(...tags) {
   for( let i = 0; i < users.length; i++){
     for ( let j = 0; j < tags.length; j++){
-    if(users[i][tags[j]]||users[i][tags[j+1]]){
+    if(users[i][tags[j]]){
       console.log(users[i])
     }
     }
