@@ -225,7 +225,7 @@ function mapUsersByFields(fields) {
 
    for(let i = 0; i < fields.length; i++){
    
-   newUser[fields[i]] = user[fields[i]]
+   newUser[fields[i]] = users[fields[i]]
 
    }   
   return newUser
