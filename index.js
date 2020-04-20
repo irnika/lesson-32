@@ -266,16 +266,22 @@ getUsersByTags (users.phone)
 * Какой общий баланс всех пользователей
 * @return {String} - $23,4344.10
 */
+function convertBalans(x){
+  let a = x.replace('$','');
+ let b = a.replace(',','');
+ return b 
+}
+
 
 function getBalanceUsers() {
   let userBalance = 0;
   let options = { style: 'currency', currency: 'USD' };
   for(let i = 0; i < users.length; i++){
     
-    
+   let b =  convertBalans(users[i].balance)
 
-  let a = users[i].balance.replace('$','');
-  let b = a.replace(',','');
+ /* let a = users[i].balance.replace('$','');
+  let b = a.replace(',','');*/
   userBalance = userBalance + (+ b)
     
   }
