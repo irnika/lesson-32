@@ -216,23 +216,26 @@ getFavoriteFruit('apple')
 * @return {Array} - список активных пользователей
 */
 
-
-function mapUsersByFields() {}
-
-    
-let result = users.map(function(element){
-   
-  let arr = {
-  name: element.name,
-  phone: element.phone,
-  email: element.email,
-  balance: element.balance,
-}
-   
+function mapUsersByFields(fields) {
   
-return arr
+
+   
+  let result = users.map(function(user){
+  let newUser ={}
+
+   for(let i = 0; i < fields.length; i++){
+   
+   newUser[fields[i]] = user[fields[i]]
+
+   }   
+  return newUser
 })
+  
 console.log(result) 
+
+}
+
+mapUsersByFields(["name", 'phone'])
 
 
 
