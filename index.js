@@ -249,17 +249,25 @@ mapUsersByFields(["name", 'phone'])
 * @param {Array} tags - список тегов(ключей) по которым выполняем, 
 * @return {Array} - список пользователей у которых есть хотя бы один тег
 */
+
+let newTags = [];
 function getUsersByTags(...tags) {
-  for( let i = 0; i < users.length; i++){
-    for ( let j = 0; j < tags.length; j++){
-    if(users[i][tags[j]]){
-      console.log(users[i])
-    }
-    }
-  }
-  }
   
-  getUsersByTags ('id', 'phone')
+for(let i = 0; i < users.length; i++){
+  
+   for (let j = 0; j < tags.length; j++){
+   
+  if(users[i][tags[j]]){
+
+    newTags.push(users[i])
+  } 
+  }
+} 
+}
+
+getUsersByTags ('id', 'phone')
+console.log(newTags)
+
 
 // ------------------------------------------------------------------------------------------------
 
