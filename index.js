@@ -9,7 +9,7 @@
 * @return {Object} - объект пользователя
 */
 
-/*function getUserById(id) {
+function getUserById(id) {
     let newUsers = users.filter(function exp(val, index){
 
       return users[index]._id === id
@@ -17,7 +17,7 @@
     console.log(newUsers)
 }
 
-getUserById("5a58d21ccb3c3f594dab0afc")*/
+getUserById("5a58d21ccb3c3f594dab0afc")
 
 
 
@@ -29,7 +29,7 @@ getUserById("5a58d21ccb3c3f594dab0afc")*/
 */
 
 
-/*function getAverangeUsers() {
+function getAverangeUsers() {
     let ageSumm = 0;
     let count = 0;
     users.forEach(function(item, i, arr) {
@@ -40,7 +40,7 @@ getUserById("5a58d21ccb3c3f594dab0afc")*/
       console.log(number)
       
 }
-getAverangeUsers()*/
+getAverangeUsers()
 
 
 
@@ -50,7 +50,7 @@ getAverangeUsers()*/
 * Определить количество активных пользователей
 * @return {Array} - список активных пользователей
 */
-/*function getActiveUsers() {
+function getActiveUsers() {
     let activeUsers = users.filter(function exp(val, index){
 
         return users[index].isActive 
@@ -58,7 +58,7 @@ getAverangeUsers()*/
       console.log(activeUsers)
 }
 getActiveUsers()
-*/
+
 
 
     
@@ -72,7 +72,7 @@ getActiveUsers()
 * @return {Object} - { male: 10, female: 20 }
 */
 
-/*function getUsersGender() {
+function getUsersGender() {
     
     let result = {male: 0, female: 0};
 
@@ -89,7 +89,7 @@ getActiveUsers()
     console.log(result)
 }
 
-getUsersGender()*/
+getUsersGender()
 
 
 
@@ -99,7 +99,7 @@ getUsersGender()*/
 * Определить самого старшего пользователя
 * @return {Number} - возраст самого старшего пользователя
 */
-/*function getOldestUser() {
+function getOldestUser() {
 
     let number = 0;
     users.forEach(function(item, i, arr) {
@@ -113,7 +113,7 @@ getUsersGender()*/
       console.log(number)
 }
 
-getOldestUser()*/
+getOldestUser()
 
 
 
@@ -124,7 +124,7 @@ getOldestUser()*/
 * @return {Number} - возраст самого младшего пользователя
 */
 
-/*function getYoungestUser() {
+function getYoungestUser() {
 
     let number = users[0].age;
     for(let i = 0; i < users.length; i++) {
@@ -138,7 +138,7 @@ getOldestUser()*/
       console.log(number)
 }
 
-getYoungestUser()*/
+getYoungestUser()
 
 
 
@@ -151,7 +151,7 @@ getYoungestUser()*/
 * @return {Array} - список сортированных пользователей
 */
 
-/*function sortUsersByAge(order) {
+function sortUsersByAge(order) {
 
   if (order === 'asc'){
     function comp(a, b) {
@@ -179,7 +179,7 @@ getYoungestUser()*/
  }
     sortUsersByAge('desc')
 
-    console.log(users)*/
+    console.log(users)
 
 
 // ------------------------------------------------------------------------------------------------
@@ -190,7 +190,7 @@ getYoungestUser()*/
 * @return {Array} - список пользователей, кто люит этот фрукт
 */
 
-/*function getFavoriteFruit(fruitName) {
+function getFavoriteFruit(fruitName) {
 
     let fruitUsers = users.filter(function exp(val, index){
 
@@ -201,7 +201,7 @@ getYoungestUser()*/
       
 }
 getFavoriteFruit('apple')
-*/
+
 
 
 
@@ -249,7 +249,7 @@ mapUsersByFields(["name", 'phone'])
 * @param {Array} tags - список тегов(ключей) по которым выполняем, 
 * @return {Array} - список пользователей у которых есть хотя бы один тег
 */
-/*function getUsersByTags(tags) {
+function getUsersByTags(tags) {
 for( let i = 0; i < users.length; i++){
   if(users[i].tags){
     console.log(users[i])
@@ -257,7 +257,7 @@ for( let i = 0; i < users.length; i++){
 }
 }
 
-getUsersByTags (users.phone)*/
+getUsersByTags (users.phone)
 
 
 // ------------------------------------------------------------------------------------------------
@@ -267,7 +267,7 @@ getUsersByTags (users.phone)*/
 * @return {String} - $23,4344.10
 */
 
-/*function getBalanceUsers() {
+function getBalanceUsers() {
   let userBalance = 0;
   let options = { style: 'currency', currency: 'USD' };
   for(let i = 0; i < users.length; i++){
@@ -281,4 +281,4 @@ getUsersByTags (users.phone)*/
   }
   console.log(new Intl.NumberFormat('en-US', options).format(userBalance ));
 }
-getBalanceUsers() */
+getBalanceUsers() 
