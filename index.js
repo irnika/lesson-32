@@ -1,6 +1,6 @@
 
 
-
+console.log(users.anim)
 // ------------------------------------------------------------------------------------------------
 
 /*
@@ -249,6 +249,34 @@ mapUsersByFields(["name", 'phone'])
 * @param {Array} tags - список тегов(ключей) по которым выполняем, 
 * @return {Array} - список пользователей у которых есть хотя бы один тег
 */
+
+/*1 вариант*/
+
+function getUsersByTags(...tag) {
+  
+  for(let i = 0; i < users.length; i++){
+    
+      if(users[i].tags){
+        let arr = users[i].tags
+        
+        for(let s = 0; s < arr.length; s++){  
+        
+         for(let j = 0; j < tag.length; j++){
+           
+           if (users[i].tags[s] == tag[j]){
+             
+             console.log(users[i])
+ 
+           }
+         }
+         }
+      }
+}
+
+}
+getUsersByTags("ex")
+
+/*2 вариант*/
 
 let newTags = [];
 function getUsersByTags(...tags) {
